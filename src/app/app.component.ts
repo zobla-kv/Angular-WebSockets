@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WebSockets';
+  header: String = 'Header';
+  footer: String = 'Footer';
 }

@@ -27,29 +27,39 @@
   width: 100%;
   height: 100%;
 }
+
+// remove if not used
 .flex-container.global { 
   border: 2px solid green;
   flex-direction: column;
   height: 100vh;
 }
-.flex-container.header { 
-  border: 1px solid;
+.flex-container.header,
+.flex-container.footer {
+  background-color: black;
+  color: white;
   justify-content: center; 
   align-items: center;
-  height: 250px;
-  // display: block;
+}
+.flex-container.header { 
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .flex-container.center { 
-  border: 1px solid red;
+  background-color: yellow;
+  position: relative;
+  min-height: 100%;
 }
 .flex-container.footer { 
-  background-color: black;
-  height: 30%;
+  height: 120px;
 }
 
 .flex-item { 
-  border: 1px solid;
-  width: 100%;
+  border: 1px solid red;
+  justify-content: center; 
+  align-items: center;
 }
 
 .justify-center {
