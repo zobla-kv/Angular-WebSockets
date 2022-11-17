@@ -1,11 +1,18 @@
-<!-- ----------------------- HEADER ------------------------------>
+<div class="flex-container global">
+  <!-- ----------------------- HEADER ------------------------------>
 <div class="flex-container header">
   <h1>{{header}}</h1>
 </div>
 <!---------------------------------------------------------------->
 <!-------------------------- CENTER ------------------------------>
 <div class="flex-container center">
-  <div class="flex-item w-50 mr-8">CAMERA</div>
+  <div class="flex-item w-50 mr-8">
+    <h2>Camera</h2>
+    <form #sendMessageForm class="message-input-form" (submit)="handleFormSubmit($event)">
+      <input class="message-input" type="text" [(ngModel)]="messageInputValue" name="message" placeholder="type message">
+      <button class="submit-button mt-8" type="submit">Send</button>
+    </form>
+  </div>
   <div class="flex-item w-50">CHAT</div>
 </div>
 <!---------------------------------------------------------------->
@@ -15,4 +22,5 @@
   <h1>{{footer}}</h1>
 </div>
 <!---------------------------------------------------------------->
+</div>
 <router-outlet></router-outlet>
